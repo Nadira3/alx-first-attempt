@@ -30,6 +30,8 @@ int main(void)
 				continue;
 				if (b > c)
 				continue;
+				if (b == c)
+				continue;
 				putchar((a % 10) + '0');
 				putchar((b % 10) + '0');
 				putchar((c % 10) + '0');
