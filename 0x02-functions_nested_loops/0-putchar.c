@@ -1,12 +1,19 @@
-#include "_putchar.h"
+#include "main.h"
 /**
- * main - entry
+ * main - prints _putchar
  *
  * return: 0
  */
 int main(void)
 {
-	_putchar('c');
+	char name[8] = "_putchar";
+
+	int i;
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(name[i]);
+	}
 	_putchar('\n');
+
 	return (0);
-}                                   
+}
