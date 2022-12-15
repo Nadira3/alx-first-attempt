@@ -1,1 +1,1 @@
-This is a readme file containing scripts for C programming language
+this a readme file for my C language project
