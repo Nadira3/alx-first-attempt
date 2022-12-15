@@ -2,6 +2,7 @@
 /**
  * _isupper - checks for uppercase character
  *
+ * @c: stores value of integer
  * Return: 0 || 1
  */
 int _isupper(int c)
