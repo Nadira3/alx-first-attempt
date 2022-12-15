@@ -21,15 +21,15 @@ void print_times_table(int n)
 			if (j > 0 && j != n)
 			{
 				if (k <= 9)
-					printf("  %d,  ", k);
-				else if (k > 9 && k <= 99)
 					printf(" %d,  ", k);
+				else if (k > 9 && k <= 99)
+					printf(" %d, ", k);
 				else
-					printf("%d,  ", k);
+					printf("%d, ", k);
 			}
 			
 			else if (j == 0)
-				printf("%d,   ", k);
+				printf("%d,  ", k);
 			else
 			{
 				if (k <= 9)
