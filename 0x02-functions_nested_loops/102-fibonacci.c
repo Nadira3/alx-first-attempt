@@ -17,9 +17,6 @@ void fibonacci(int n)
 		a = b;
 		b = c;
 
-		if (c < 0)
-			c = -c;
-
 		if (i != n)
 			printf("%u, ", c);
 		else
