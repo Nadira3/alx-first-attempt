@@ -1,24 +1,34 @@
 #include <stdio.h>
 /**
+ * fibonacci - prints fibonacci numbers
+ *
+ * @n: stores integer value
+ */
+void fibonacci(int n)
+{
+	int a = 0;
+	int b = 1;
+	int i;
+
+	for (i = 1; i <= n; i++)
+	{
+		long long int c = a + b;
+		a = b;
+		b = c;
+
+		if (i != n)
+			printf("%lld, ", c);
+		else
+			printf("%lld", c);
+	}
+}
+/**
  * main - entry point of the program
  *
  * Return: 0
  */
 int main(void)
 {
-	int i;
-	
-	for (i = 0; i <= 50; i++)
-	{
-		long int sum = 0;
-		sum = sum + i;
-		while (i > 0)
-		{
-		sum += sum;
-		printf("%ld, ", sum);
-		}
-	}
-	printf("\n");
-
+	fibonacci(50);
 	return (0);
 }
