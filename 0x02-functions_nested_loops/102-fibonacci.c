@@ -13,6 +13,7 @@ void fibonacci(int n)
 	for (i = 1; i <= n; i++)
 	{
 		long long int c = a + b;
+
 		a = b;
 		b = c;
 
