@@ -24,6 +24,8 @@ void prime(long int n)
 }
 /**
  * main - entry of the program
+ *
+ * Return: 0
  */
 int main(void)
 {
