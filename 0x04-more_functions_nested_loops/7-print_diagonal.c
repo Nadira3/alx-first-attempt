@@ -25,11 +25,14 @@ void print_diagonal(int n)
 	{
 		if (n <= 0)
 		{
-			break;
+			continue;
 		}
 		space(i);
 		_putchar('\\');
 		_putchar('\n');
 	}
-	_putchar('\n');
+	if ((i != n) || (n == 0))
+	{
+		_putchar('\n');
+	}
 }
