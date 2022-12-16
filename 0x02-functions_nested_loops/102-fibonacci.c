@@ -12,15 +12,15 @@ void fibonacci(int n)
 
 	for (i = 1; i <= n; i++)
 	{
-		long long int c = a + b;
+		long int c = a + b;
 
 		a = b;
 		b = c;
 
 		if (i != n)
-			printf("%lld, ", c);
+			printf("%ld, ", c);
 		else
-			printf("%lld", c);
+			printf("%ld", c);
 	}
 }
 /**
