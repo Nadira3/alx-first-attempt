@@ -29,5 +29,8 @@ void print_square(int size)
 		squaref(size);
 		_putchar('\n');
 	}
-	_putchar('\n');
+	if ((i != size) || (size == 0))
+	{
+		_putchar('\n');
+	}
 }
