@@ -16,11 +16,6 @@ int _strlen(char *s)
 	}
 	return (i);
 }
-
-int _putchar(char c)
-{
-	return(write (1, &c, 1));
-}
 /**
  * rev_string - reverses a string
  * @s: string variable
