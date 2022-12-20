@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _strlen - returns the length of a string
+ * _puts - returns the length of a string
  *
- * @s: string variable
- * Return: 0
+ * @str: string variable
  */
 void _puts(char *str)
 {
@@ -15,4 +14,5 @@ void _puts(char *str)
 		str++;
 		_putchar(str[i]);
 	}
+	_putchar('\n');
 }
