@@ -22,16 +22,14 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
-	int i;
+	int i = 0;
 	int len;
 
 	len = _strlen(s);
 
-	for (i = len - 1; i >= 0; i--)
+	while (i <= len - 1 && i >= 0)
 	{
-		if (*s != '\0')
-			_putchar(s[i]);
-		break;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
