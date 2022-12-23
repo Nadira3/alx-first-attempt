@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- * *string_toupper - changes the letter cases of a string
+ * string_toupper - changes the letter cases of a string
+ *
+ * @s: string
+ * Return: character
  */
 char *string_toupper(char *s)
 {
@@ -9,7 +12,7 @@ char *string_toupper(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] >= 97 && s[i] <= 122)
-			s[i] -=32;
+			s[i] -= 32;
 	}
 	return (s);
 }
