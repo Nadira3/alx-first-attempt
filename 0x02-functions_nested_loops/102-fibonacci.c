@@ -20,7 +20,7 @@ int main(void)
 			printf("%lu, ", sum);
 		}
 		else
-			printf("%lu", sum);
+			printf("%lu\n", sum);
 		i = j;
 		j = sum;
 		count++;
