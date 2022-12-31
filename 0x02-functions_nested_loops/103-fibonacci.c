@@ -11,7 +11,8 @@ int main(void)
 	unsigned long int sum;
 	int count = 0;
 
-    printf("%lu, %lu, ", i, j);
+	printf("%lu, %lu, ", i, j);
+
 	while (count < 48)
 	{
 		sum = i + j;
@@ -20,9 +21,9 @@ int main(void)
 			break;
 		}
 		if (sum < 3500000)
-	    	printf("%lu, ", sum);
-	    else
-	        printf("%lu", sum);
+			printf("%lu, ", sum);
+		else
+			printf("%lu", sum);
 		i = j;
 		j = sum;
 		count++;
