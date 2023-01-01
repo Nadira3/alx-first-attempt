@@ -12,10 +12,10 @@ int main(void)
 	int count = 0;
 
 	printf("%lu, %lu, ", i, j);
-	while (count < 97)
+	while (count < 96)
 	{
 		sum = i + j;
-		if (count != 96)
+		if (count != 95)
 		{
 			printf("%lu, ", sum);
 		}
