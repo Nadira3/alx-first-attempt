@@ -1,33 +1,27 @@
 #include <stdio.h>
 /**
- * main - entry point of program. prints fibonacci numbers less than 4M
+ * main - prints sum of even numbers in fibonacci series less than 4M
  *
  * Return: 0
  */
 int main(void)
 {
-	unsigned long int i = 1;
-	unsigned long int j = 2;
-	unsigned long int sum;
-	int count = 0;
+	unsigned long int t1 = 0, t2 = 1, sum, result;
 
-	printf("%lu, %lu, ", i, j);
-
-	while (count < 48)
+	while (1)
 	{
-		sum = i + j;
-		if (sum >= 4000000)
+		if (sum > 4000000)
 		{
 			break;
 		}
-		if (sum < 3500000)
-			printf("%lu, ", sum);
-		else
-			printf("%lu", sum);
-		i = j;
-		j = sum;
-		count++;
+		sum = t1 + t2;
+		if (sum % 2 == 0)
+		{
+			result += sum;
+		}
+		t1 = t2;
+		t2 = sum;
 	}
+	printf("%lu", result);
 	return (0);
 }
-
