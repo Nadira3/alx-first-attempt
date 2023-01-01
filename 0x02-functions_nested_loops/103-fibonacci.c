@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	unsigned long int t1 = 0, t2 = 1, sum, result;
+	unsigned long int t1 = 0, t2 = 1, sum;
+	static unsigned long int result;
 
 	while (1)
 	{
@@ -22,6 +23,7 @@ int main(void)
 		t1 = t2;
 		t2 = sum;
 	}
-	printf("%lu", result);
+	printf("%lu\n", result);
+
 	return (0);
 }
