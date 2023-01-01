@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - entry point of program. prints 50 fibonacci numbers
+ * main - entry point of program. prints 98 fibonacci numbers
  *
  * Return: 0
  */
@@ -12,10 +12,10 @@ int main(void)
 	int count = 0;
 
 	printf("%lu, %lu, ", i, j);
-	while (count < 6)
+	while (count < 96)
 	{
 		sum = i + j;
-		if (count != 5)
+		if (count != 95)
 		{
 			printf("%lu, ", sum);
 		}
