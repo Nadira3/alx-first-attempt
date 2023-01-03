@@ -40,7 +40,7 @@ unsigned int _strspn(char *s, char *accept)
 					break;
 				}
 				else
-					*p += 1
+					*p += 1;
 			}
 		}
 	}
