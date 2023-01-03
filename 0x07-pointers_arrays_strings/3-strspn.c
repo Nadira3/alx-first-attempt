@@ -18,17 +18,18 @@ unsigned int _strspn(char *s, char *accept)
     
     for (i = 0; i < _strlen(s); i++)
     {
-        for (j = 0; j < _strlen(accept); j++)
-        {
-            if (s[i] == ' ')
-		    break;
-	    if (s[i] == accept[j])
-            {
+	    if (s[i] != ' ')
+	    {
+        	for (j = 0; j < _strlen(accept); j++)
+        	{
+	    	if (s[i] == accept[j])
+            	{
 		    *p += 1;
-            }
-	    else
+            	}
+	    	else
 		    continue;
-        }
+        	}
+	    }
     }
     return (n);
 }
