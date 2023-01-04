@@ -1,20 +1,23 @@
 #include "main.h"
 /**
- * _strlen - finds the length of string
+ * _strchr - locates a character in a string
  *
- * @s: string
- * Return: string length
+ * @s: pointer to array
+ * @c: character
+ * Return: pointer to the first occurrence
+ * of the character c in the string s, or NULL
  */
-int _strlen(char *s)
+char *_strchr(char *s, char c)
 {
-	int i = 0;
+	char **p = &s;
+	char *q = &c;
 
-	while (s[i] != '\0')
-	{
-		s++;
-		i++;
-	}
-	return (i);
+	while (**p && **p != *q)
+		++*p;
+	if (*q == **p)
+		return ((char *)(*p));
+	else
+		return ((char *)(NULL));
 }
 /**
  * _strspn - finds the length of a substring
@@ -25,25 +28,13 @@ int _strlen(char *s)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
 	unsigned int n = 0;
-	unsigned int *p = &n;
 
-	for (i = 0; i < _strlen(s); i++)
+	if ((s == NULL) || (accept == NULL))
+		return (n);
+	while (*s && _strchr(accept, *s++))
 	{
-		if (s[i] != ' ')
-		{
-			for (j = 0; j < _strlen(accept); j++)
-			{
-				if (s[i] != accept[j])
-				{
-					break;
-				}
-				else
-					*p += 1;
-			}
-		}
+		n++;
 	}
 	return (n);
 }
-
