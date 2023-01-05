@@ -15,12 +15,12 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int n = 0;
 	unsigned int *p = &n;
 
-	for (i = 0; i <= _strlen(s)/*(sizeof(s)/sizeof(s[0]))*/; i++)
+	for (i = 0; i < _strlen(s)/*(sizeof(&s)/sizeof(&s[0]))*/; i++)
     {
-        for (j = 0; j <= _strlen(accept)/*(sizeof(accept)/sizeof(accept[0]))*/; j++)
+        for (j = 0; j < _strlen(accept)/*(sizeof(&accept)/sizeof(&accept[0]))*/; j++)
         {
-            if (s[i] == ' ')
-		        break;
+            /*if (s[i] == ' ')
+		        break;*/
 	    if (s[i] == accept[j])
             {
 		    *p += 1;
