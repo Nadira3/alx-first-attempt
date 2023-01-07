@@ -6,7 +6,7 @@
  *
  * @argc: argument count
  * @argv: argument vector
- * Return: 0
+ * Return: 0 || 1
  */
 int main(int argc, char *argv[])
 {
@@ -15,9 +15,8 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("Error");
-		printf("\n");
-		return(1);
+		printf("%s\n", "Error");
+		return (1);
 	}
 	else
 	{
