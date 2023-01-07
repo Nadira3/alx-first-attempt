@@ -15,23 +15,22 @@ int main(int argc, char *argv[])
 	int add = 0;
 
 	if (argc == 1)
-	{
 		printf("%d\n", add);
-	}
-	else
+	else if (argc == 2)
+		printf("%d\n", atoi(argv[1]));
+	else if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
 			if (!(isdigit(*argv[i])))
 			{
-				printf("Error");
-				printf("\n");
+				printf("%s\n", "Error");
 				return (1);
 			}
 			else
 				add += atoi(argv[i]);
 		}
+		printf("%d\n", add);
 	}
-	printf("%d\n", add);
 	return (0);
 }
