@@ -12,11 +12,11 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned int add = 0;
+	int add = 0;
 
 	if (argc == 1)
 	{
-		printf("%u\n", add);
+		printf("%d\n", add);
 	}
 	else
 	{
@@ -31,10 +31,7 @@ int main(int argc, char *argv[])
 			else
 				add += atoi(argv[i]);
 		}
-		printf("%u\n", add);
 	}
-	if (isdigit(add))
-		return (0);
-	else
-		return (1);
+	printf("%d\n", add);
+	return (0);
 }
