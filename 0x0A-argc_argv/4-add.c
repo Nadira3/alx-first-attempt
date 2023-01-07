@@ -12,13 +12,13 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int add = 0;
+	unsigned int add = 0;
 
 	if (argc == 1)
-		return (add);
+		printf("%u\n", add);
 	else if (argc == 2)
-		return (atoi(argv[1]));
-	else if (argc > 2)
+		printf("%u\n", atoi(argv[1]));
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 			else
 				add += atoi(argv[i]);
 		}
+		printf("%d\n", add);
 	}
-	return (add);
+	return (0);
 }
