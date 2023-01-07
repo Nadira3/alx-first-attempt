@@ -10,13 +10,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	unsigned int add = 0;
+	int i, num = 0;
 
 	if (argc == 1)
-		printf("%u\n", add);
+		printf("%d\n", num);
 	else if (argc == 2)
-		printf("%u\n", atoi(argv[1]));
+	{
+		num = atoi(argv[1]);
+		printf("%d\n", num);
+	}
 	else
 	{
 		for (i = 1; i < argc; i++)
@@ -27,9 +29,9 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			else
-				add += atoi(argv[i]);
+				num += atoi(argv[i]);
 		}
-		printf("%u\n", add);
+		printf("%d\n", num);
 	}
 	return (0);
 }
