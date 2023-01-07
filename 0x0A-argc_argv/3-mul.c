@@ -10,7 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, mul = 1;
+	int i;
+	long int mul = 1;
 
 	if (argc == 1)
 		printf("Error\n");
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 		{
 			mul *= atoi(argv[i]);
 		}
-		printf("%d\n", mul);
+		printf("%ld\n", mul);
 	}
 	return (0);
 }
