@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - entry point of the program
  *
@@ -21,9 +22,16 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
+			if (!(isdigit(*argv[i])))
+			{
+				printf("Error\n");
+				return (1);
+				break;
+			}
 			add += atoi(argv[i]);
 		}
 		printf("%ld\n", add);
+		return (0);
 	}
 	return (0);
 }
