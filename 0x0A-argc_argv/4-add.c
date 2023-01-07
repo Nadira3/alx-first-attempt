@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
 	int add = 0;
 
 	if (argc == 1)
-		printf("%d\n", add);
+		return (add);
 	else if (argc == 2)
-		printf("%d\n", atoi(argv[1]));
+		return (atoi(argv[1]));
 	else if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 			else
 				add += atoi(argv[i]);
 		}
-		printf("%d\n", add);
 	}
-	return (0);
+	return (add);
 }
