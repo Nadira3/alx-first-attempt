@@ -14,7 +14,10 @@ int main(int argc, char *argv[])
 	long int mul = 1;
 
 	if (argc == 1)
-		printf("Error\n");
+	{
+		printf("Error");
+		printf("\n");
+	}
 	else
 	{
 		for (i = 1; i < argc; i++)
