@@ -28,9 +28,13 @@ int main(int argc, char *argv[])
 				printf("\n");
 				return (1);
 			}
-			add += atoi(argv[i]);
+			else
+				add += atoi(argv[i]);
 		}
 		printf("%u\n", add);
 	}
-	return (0);
+	if (isdigit(add))
+		return (0);
+	else
+		return (1);
 }
