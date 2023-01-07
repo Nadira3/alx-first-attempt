@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -7,7 +6,7 @@
  *
  * @argc: argument count
  * @argv: argument vector
- * Return: 0
+ * Return: 0 || 1
  */
 int main(int argc, char *argv[])
 {
@@ -30,7 +29,7 @@ int main(int argc, char *argv[])
 			else
 				add += atoi(argv[i]);
 		}
-		printf("%d\n", add);
+		printf("%u\n", add);
 	}
 	return (0);
 }
