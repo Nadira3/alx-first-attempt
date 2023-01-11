@@ -48,7 +48,7 @@ char *_strdup(char *str)
 	char *arr;
 	int size = _strlen(str) + 1;
 
-	if (str == NULL || size == 0)
+	if (str == NULL || size == 1)
 		return (NULL);
 	arr = malloc(sizeof(char) * size);
 	arr = _strcpy(arr, str);
