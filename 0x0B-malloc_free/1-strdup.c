@@ -10,6 +10,8 @@ int _strlen(char *s)
 {
 	int i = 0;
 
+	if (s == NULL)
+		return (0);
 	while (*s != '\0')
 	{
 		i++;
@@ -44,9 +46,9 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(char *str)
 {
 	char *arr;
-	int size = _strlen(str) + 1;
+	int size = _strlen(str);
 
-	if (str == NULL)
+	if (str == NULL || size == 0)
 		return (NULL);
 	arr = malloc(sizeof(char) * size);
 	arr = _strcpy(arr, str);
