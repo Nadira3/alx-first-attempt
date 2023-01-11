@@ -46,11 +46,10 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(char *str)
 {
 	char *arr;
-	int size = _strlen(str) + 1;
 
-	if (str == NULL || size == 1)
+	if (str == NULL || _strlen(str) == 0)
 		return (NULL);
-	arr = malloc(sizeof(char) * size);
+	arr = malloc(sizeof(char) * (_strlen(str) + 1));
 	arr = _strcpy(arr, str);
 	return (arr);
 
