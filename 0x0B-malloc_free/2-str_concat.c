@@ -72,6 +72,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *arr;
 	int size;
+
 	size = _strlen(s1) + _strlen(s2) + 1;
 
 	if (size == 0)
@@ -79,6 +80,16 @@ char *str_concat(char *s1, char *s2)
 	arr = malloc(sizeof(char) * size);
 	if (arr == NULL)
 		return (NULL);
+	if (s1 == NULL)
+	{
+		arr = _strcpy(arr, s1);
+		return (arr);
+	}
+	if (s2 == NULL)
+	{
+		arr = _strcpy(arr, s2);
+		return (arr);
+	}
 	arr = _strcpy(arr, s1);
 	arr = _strcat(arr, s2);
 	return (arr);
